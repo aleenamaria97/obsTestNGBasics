@@ -5,8 +5,8 @@
         <classes>
             <class name="com.obsqura.testngcommands.HomeTest">
             <methods>
-                <exclude name="verifyHomePageTitle"/>
-                <include name="verifyHomePageUserMenu"/>
+                <include name="verifyHomePageTitle"/>
+                <exclude name="verifyHomePageUserMenu"/>
             </methods>
         </class>
             <class name="com.obsqura.testngcommands.LoginTest">
