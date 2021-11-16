@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Smoke Suit" duration-ms="134881" started-at="2021-11-16T22:24:29 IST" finished-at="2021-11-16T22:26:44 IST">
+    <groups>
+    </groups>
+    <test name="chrome Test" duration-ms="134881" started-at="2021-11-16T22:24:29 IST" finished-at="2021-11-16T22:26:44 IST">
+      <class name="com.obsqura.testngcommands.SeleniumTestNG">
+        <test-method status="PASS" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="setup" is-config="true" duration-ms="44293" started-at="2021-11-16T22:24:29 IST" finished-at="2021-11-16T22:25:14 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://demowebshop.tricentis.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyUserLogin(java.lang.String,java.lang.String)[pri:1, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="verifyUserLogin" duration-ms="2915" started-at="2021-11-16T22:25:14 IST" data-provider="loginData" finished-at="2021-11-16T22:25:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aleenamariya97@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aleena97]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="tearDown" is-config="true" duration-ms="89" started-at="2021-11-16T22:25:17 IST" finished-at="2021-11-16T22:25:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="setup" is-config="true" duration-ms="41803" started-at="2021-11-16T22:25:17 IST" finished-at="2021-11-16T22:25:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://demowebshop.tricentis.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyUserLogin(java.lang.String,java.lang.String)[pri:1, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="verifyUserLogin" duration-ms="3052" started-at="2021-11-16T22:25:58 IST" data-provider="loginData" finished-at="2021-11-16T22:26:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[navyanaveenam@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rithul@12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="tearDown" is-config="true" duration-ms="73" started-at="2021-11-16T22:26:01 IST" finished-at="2021-11-16T22:26:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="setup" is-config="true" duration-ms="42388" started-at="2021-11-16T22:26:02 IST" finished-at="2021-11-16T22:26:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://demowebshop.tricentis.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyTitle()[pri:2, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="verifyTitle" duration-ms="11" started-at="2021-11-16T22:26:44 IST" finished-at="2021-11-16T22:26:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.obsqura.testngcommands.SeleniumTestNG@31dc339b]" name="tearDown" is-config="true" duration-ms="185" started-at="2021-11-16T22:26:44 IST" finished-at="2021-11-16T22:26:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.obsqura.testngcommands.SeleniumTestNG -->
+    </test> <!-- chrome Test -->
+  </suite> <!-- Smoke Suit -->
+</testng-results>

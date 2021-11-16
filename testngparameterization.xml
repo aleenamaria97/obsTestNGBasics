@@ -7,12 +7,12 @@
     </listeners>
        <test name="chrome Test">
            <parameter name="browser" value="chrome"/>
-           <parameter name="url" value="http://demowebshop.tricentis.com/login"/>
+           <parameter name="url" value="http://demowebshop.tricentis.com"/>
         <classes>
             <class name="com.obsqura.testngcommands.SeleniumTestNG">
             <methods>
                 <include name="verifyUserLogin"/>
-                <exclude name="verifyTitle"/>
+                <include name="verifyTitle"/>
             </methods>
         </class>
         </classes>

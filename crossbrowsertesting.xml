@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suit">
+    <listeners>
+        <listener class-name="com.obsqura.extentreportlistener.ExtentReportListener">
+        </listener>
+    </listeners>
+       <test name="chrome Test">
+           <parameter name="browser" value="chrome"/>
+           <parameter name="url" value="http://demowebshop.tricentis.com/login"/>
+        <classes>
+            <class name="com.obsqura.testngcommands.SeleniumTestNG">
+            <methods>
+                <include name="verifyUserLogin"/>
+                <exclude name="verifyTitle"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+    <test  name="EdgeTest" >
+        <parameter name="browser" value="edge"/>
+        <parameter name="url" value="http://demowebshop.tricentis.com/login"/>
+        <classes>
+            <class name="com.obsqura.testngcommands.SeleniumTestNG">
+                <methods>
+                    <include name="verifyUserLogin"/>
+                    <exclude name="verifyTitle"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+    <test  name="FirefoxTest" >
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="http://demowebshop.tricentis.com/login"/>
+        <classes>
+            <class name="com.obsqura.testngcommands.SeleniumTestNG">
+                <methods>
+                    <include name="verifyUserLogin"/>
+                    <exclude name="verifyTitle"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

@@ -1,5 +1,6 @@
 package com.obsqura.testngcommands;
 
+import com.relevantcodes.extentreports.ExtentReports;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,9 +9,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
-public class SeleniumTestNG {
+public class ExtentReportLog {
     WebDriver driver;
+    public ExtentReports report;
+    static ExtentTest test;
 
     public void testInitialize(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
@@ -27,18 +32,29 @@ public class SeleniumTestNG {
         driver.manage().deleteAllCookies();
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
     }
+    @BeforeTest
+    public void setReport() {
+        report = new ExtentReports(System.getProperty("user.dir") + "//test-output//Extent.html", true);
+        test = report.startTest("ExtentDemo");
+    }
     @BeforeMethod
-    @Parameters({"browser","url"})
-    public void setup(String browserName,String baseUrl) {
+    @Parameters({"browser", "url"})
+    public void setup(String browserName, String baseUrl) {
         testInitialize(browserName);
         driver.get(baseUrl);
+        test.log(LogStatus.PASS, "Navigated to the  URL");
     }
 
     @AfterMethod
     public void tearDown() {
-
         driver.close();
+        test.log(LogStatus.PASS, " driver closed");
         // driver.quit();
+    }
+    @AfterTest
+    public void endReport() {
+        report.endTest(test);
+        report.flush();
     }
     @Test(enabled = true,priority = 1,dataProvider = "loginData")
     public void verifyUserLogin(String uName,String pWord) {
@@ -54,6 +70,7 @@ public class SeleniumTestNG {
         String actualUserName = userName.getText();
         String expectedUserName = uName;
         Assert.assertEquals(actualUserName, expectedUserName, "log-in failed");
+        test.log(LogStatus.PASS, "login success");
     }
     @DataProvider(name="loginData")
     public Object[][] userCreditionals(){
@@ -65,11 +82,11 @@ public class SeleniumTestNG {
         return data;
     }
 
-    @Test(enabled = true,priority = 2)
+    @Test(priority = 2,enabled = true)
     public void verifyTitle() {
         String expectedTitle = "Demo Web Shop";
         String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle, "Title Mismatch");
+        Assert.assertEquals(actualTitle, expectedTitle, "Values not matching");
+        test.log(LogStatus.PASS, "Successfully Asserted");
     }
 }
-
