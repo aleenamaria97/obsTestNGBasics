@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Suit" parallel="tests" thread-count="1">
+<suite name="Smoke Suit">
     <listeners>
         <listener class-name="com.obsqura.extentreportlistener.ExtentReportListener">
         </listener>
     </listeners>
-       <test name="Functional Test">
+       <test name="chrome Test">
+           <parameter name="browser" value="chrome"/>
+           <parameter name="url" value="http://demowebshop.tricentis.com/login"/>
         <classes>
             <class name="com.obsqura.testngcommands.SeleniumTestNG">
             <methods>
                 <include name="verifyUserLogin"/>
-                <include name="verifyTitle"/>
+                <exclude name="verifyTitle"/>
             </methods>
         </class>
         </classes>

@@ -4,11 +4,11 @@
     <test name="Functional Test">
         <classes>
             <class name="com.obsqura.testngcommands.HomeTest">
-            <methods>
-                <include name="verifyHomePageTitle"/>
-                <include name="verifyHomePageUserMenu"/>
-            </methods>
-        </class>
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                    <include name="verifyHomePageUserMenu"/>
+                </methods>
+            </class>
             <class name="com.obsqura.testngcommands.LoginTest">
                 <methods>
                     <include name="verifyLoginPageTitle"/>
