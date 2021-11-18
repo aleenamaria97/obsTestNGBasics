@@ -1,5 +1,9 @@
 package com.obsqura.testngcommands;
 
+import com.obsqura.extentreportlistener.SendEmailTest;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,11 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SeleniumTestNG {
-    WebDriver driver;
+public class SendEmailTestReport
+{   WebDriver driver;
 
     public void testInitialize(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
@@ -30,11 +31,15 @@ public class SeleniumTestNG {
         driver.manage().deleteAllCookies();
         // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
     }
+    @BeforeSuite
+    public void sendingEmail(){
+        SendEmailTest.sendEmail(System.getProperty("user.dir")+"//test-output//","Extent.html","aleenamariajames1997@gmail.com");
+    }
     @BeforeMethod
     @Parameters({"browser","url"})
     public void setup(String browserName,String baseUrl) {
         testInitialize(browserName);
-        //driver.get(baseUrl);
+        driver.get(baseUrl);
     }
 
     @AfterMethod
@@ -68,19 +73,10 @@ public class SeleniumTestNG {
         return data;
     }
 
-    @Test(enabled = false,priority = 2)
+    @Test(enabled = true,priority = 2)
     public void verifyTitle() {
         String expectedTitle = "Demo Web Shop";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle, "Title Mismatch");
     }
-    @Test()
-    public void verificationOfTable(){
-        driver.get("www.w3schools.com/html/html_tables.asp");
-        List<WebElement> rowElement= driver.findElements(By.xpath("//table[@id='customers']//tr"));
-        List<WebElement>coloumElement= driver.findElements(By.xpath("//table[@id='customers']//tr/td"));
-        List<ArrayList<String>> getGridData=TableUtility.getGridData( rowElement,coloumElement);
-        System.out.println(getGridData);
-    }
 }
-

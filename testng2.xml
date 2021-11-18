@@ -10,7 +10,8 @@
             <class name="com.obsqura.testngcommands.SeleniumTestNG">
             <methods>
                 <include name="verifyUserLogin"/>
-                <include name="verifyTitle"/>
+                <exclude name="verifyTitle"/>
+                <include name="verificationOfTable"/>
             </methods>
         </class>
         </classes>

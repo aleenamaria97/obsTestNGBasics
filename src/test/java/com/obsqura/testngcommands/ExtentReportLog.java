@@ -35,7 +35,7 @@ public class ExtentReportLog {
     @BeforeTest
     public void setReport() {
         report = new ExtentReports(System.getProperty("user.dir") + "//test-output//Extent.html", true);
-        test = report.startTest("ExtentDemo");
+        test = report.startTest("ExtentReport");
     }
     @BeforeMethod
     @Parameters({"browser", "url"})

@@ -9,10 +9,10 @@
            <parameter name="browser" value="chrome"/>
            <parameter name="url" value="http://demowebshop.tricentis.com"/>
         <classes>
-            <class name="com.obsqura.testngcommands.SeleniumTestNG">
+            <class name="com.obsqura.testngcommands.SendEmailTestReport">
             <methods>
                 <include name="verifyUserLogin"/>
-                <exclude name="verifyTitle"/>
+                <include name="verifyTitle"/>
             </methods>
         </class>
         </classes>
