@@ -33,7 +33,7 @@ public class SendEmailTestReport
     }
     @BeforeSuite
     public void sendingEmail(){
-        SendEmailTest.sendEmail(System.getProperty("user.dir")+"//test-output//","Extent.html","aleenamariajames1997@gmail.com");
+        SendEmailTest.sendEmail(System.getProperty("user.dir")+"//test-output//","Extent.html","aleenamariya97@gmail.com");
     }
     @BeforeMethod
     @Parameters({"browser","url"})
